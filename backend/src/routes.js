@@ -3,17 +3,17 @@ import PostController from "./Controllers/PostController.js";
 
 const router = Router();
 
-router.get("/posts", PostController.getPosts);
+router.get("/api/posts", PostController.getPosts);
 
-router.post("/posts", PostController.createPost);
+router.post("/api/posts", PostController.createPost);
 
-router.get("/posts/:slug", PostController.getPostBySlug);
+router.get("/api/posts/:slug", PostController.getPostBySlug);
 
-router.get("/posts/id/:id", PostController.getPostById);
+router.get("/api/posts/id/:id", PostController.getPostById);
 
-router.put("/posts/:slug", PostController.updatePost);
+router.put("/api/posts/:slug", PostController.updatePost);
 
-router.delete("/posts/:slug", PostController.deletePost);
+router.delete("/api/posts/:slug", PostController.deletePost);
 
 
 router.post("/posts/:slug/comments", PostController.addComment);

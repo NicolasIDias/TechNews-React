@@ -20,6 +20,7 @@ class PostController {
   async getPosts(request, response) {
     try {
       const repositoryResponse = await PostRepository.findAll();
+      console.log("eba")
       response.status(repositoryResponse.statusCode).json(repositoryResponse);
     } catch (error) {
       console.error("Error in getPosts controller:", error);
