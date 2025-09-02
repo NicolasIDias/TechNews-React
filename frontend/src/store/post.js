@@ -6,7 +6,7 @@ export const useSearch = create((setter) => ({
   fetchPosts: async () => {
     const response = await fetch("/api/posts");
     const data = await response.json();
-    setter({ Posts: data });
-    return data;
+    setter({ Posts: data.data });
   },
+                                                                                                                                                                        
 }));
